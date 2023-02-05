@@ -25,3 +25,12 @@
     box-shadow: 0 0 10px 5px blue;
     border-radius: 100%;
 }
+
+#percent {
+    position: fixed;
+    color: white;
+    background: #fff3;
+    top: 0;
+    right: 0;
+    padding: 0.25rem;
+}

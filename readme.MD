@@ -4,9 +4,7 @@ Demo at [https://gebrandon.com/cells.html](https://gebrandon.com/cells.html).
 
 This is an old computer science demo adapted to a web browser.
 
-A two-dimensional array starts with a random spread of cells / empty spaces.
-
-As put by ChatGPT:
+As explained by ChatGPT:
 
 **Me:**
 
@@ -22,6 +20,8 @@ As put by ChatGPT:
 > 4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
 >
 > The Game of Life is often used as a demonstration of how simple rules can lead to complex and seemingly unpredictable behavior, and it is often used as a teaching tool in computer science and mathematics.
+
+---
 
 I wanted to create a simple demo that would run in a web browser, and elected to use "Vanilla" JavaScript to avoid the overhead of a framework like React.
 
