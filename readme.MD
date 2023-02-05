@@ -1,5 +1,7 @@
 # Cells
 
+Demo at [https://gebrandon.com/cells.html](https://gebrandon.com/cells.html).
+
 This is an old computer science demo adapted to a web browser.
 
 A two-dimensional array starts with a random spread of cells / empty spaces.
