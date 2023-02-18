@@ -8,7 +8,7 @@ const columnHTML = (arr, x) =>
 let fps = 10;
 
 let data = [[]];
-const divReferences = [[]];
+const divs = [[]];
 
 function sizeGridToWindow() {
     const prevW = data.length;
@@ -50,12 +50,25 @@ function sizeGridToWindow() {
 
 function generateDivReferences() {
     app.innerHTML = data.map(columnHTML).join('');
-    divReferences.length = 0;
+    divs.length = 0;
     for (let x = 0; x < data.length; x++) {
         const col = [];
         for (let y = 0; y < data[x].length; y++) col.push(document.getElementById(`x${x}y${y}`));
-        divReferences.push(col);
+        divs.push(col);
     }
+}
+
+function addMouseOver() {
+    for (let x = 0; x < divs.length; x++)
+        for (let y = 0; y < divs[x].length; y++)
+            divs[x][y].addEventListener('mouseover', toggle(x, y));
+}
+
+function toggle(x, y) {
+    return function () {
+        // data[x][y] = !data[x][y];
+        data[x][y] = true;
+    };
 }
 
 function processCells() {
@@ -93,7 +106,7 @@ function processCells() {
 function paintCellsToDivs() {
     for (let x = 0; x < data.length; x++)
         for (let y = 0; y < data[x].length; y++) {
-            const div = divReferences[x][y];
+            const div = divs[x][y];
 
             if (data[x][y]) div.classList.add('active');
             else div.classList.remove('active');
@@ -118,5 +131,6 @@ window.addEventListener('resize', () => {
 
 sizeGridToWindow();
 generateDivReferences();
+addMouseOver();
 
 startAnimation();
