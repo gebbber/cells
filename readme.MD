@@ -1,6 +1,6 @@
 # Cells
 
-Demo at [https://gebrandon.com/cells.html](https://gebrandon.com/cells.html).
+Demo at [https://gebbber.github.io/cells](https://gebbber.github.io/cells).
 
 This is an old computer science demo adapted to a web browser.
 
